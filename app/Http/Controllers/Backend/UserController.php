@@ -22,8 +22,19 @@ class UserController extends Controller
     }
 
     public function userStore(Request $request){
-        $validateData-$request->validate([
-            
-        ])
+        $validateData=$request->validate([
+            'email'=>'required|unique:users',
+            'textNama'=>'required',
+        ]);
+
+        $data= new User();
+        $data->usertype=$request->selectUser;
+        $data->name=$request->textNama;
+        $data->email=$request->email;
+        $data->password=bcrypt($request->password);
+        $data->save();
+
+
+        return redirect()->route('user.view')->with('info','Tambah user berhasil');
     }
 }

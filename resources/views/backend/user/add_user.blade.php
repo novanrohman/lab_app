@@ -18,6 +18,7 @@
 			  <div class="row">
 				<div class="col">
 					<form method="post" action="{{route('users.store')}}">
+                        @csrf
 					  <div class="row">
 						
                         <div class="col-6">
@@ -26,8 +27,8 @@
 								<div class="controls">
 									<select name="selectUser" id="selectUser" required class="form-control">
 										<option value="">Pilih group user</option>
-										<option value="1">Admin</option>
-										<option value="2">User</option>
+										<option value="Admin">Admin</option>
+										<option value="User">User</option>
 									</select>
 								</div>
 							</div>		
@@ -76,3 +77,5 @@
   <!-- /.content-wrapper -->
 
 @endsection
+
+<script src="{{asset('backend/js/pages/form-validation.js')}}"></script>
