@@ -15,4 +15,15 @@ class UserController extends Controller
        $data['allDataUser']=User::all();
        return view('backend.user.view_user', $data);
     }
+
+    public function UserAdd(){
+    //    $data['allDataUser']=User::all();
+       return view('backend.user.add_user');
+    }
+
+    public function userStore(Request $request){
+        $validateData-$request->validate([
+            
+        ])
+    }
 }
