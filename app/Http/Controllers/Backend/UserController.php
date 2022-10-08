@@ -37,4 +37,29 @@ class UserController extends Controller
 
         return redirect()->route('user.view')->with('info','Tambah user berhasil');
     }
+
+   public function UserEdit($id){
+    // dd('berhasil edit');
+    $editData=User::find($id);
+    return view('backend.user.edit_user', compact('editData'));
+   }
+
+   public function userUpdate(Request $request){
+        $validateData=$request->validate([
+            'email'=>'required|unique:users',
+            'textNama'=>'required',
+        ]);
+
+        $data= User::find($id);
+        $data->usertype=$request->selectUser;
+        $data->name=$request->textNama;
+        $data->email=$request->email;
+        // if($request->password!=""){
+        //     $data->password=bcrypt($request->password);
+        // }
+        $data->save();
+
+
+        return redirect()->route('user.view')->with('info','Tambah user berhasil');
+    }
 }
