@@ -60,6 +60,14 @@ class UserController extends Controller
         $data->save();
 
 
-        return redirect()->route('user.view')->with('info','Tambah user berhasil');
+        return redirect()->route('user.view')->with('fire','Tambah user berhasil');
     }
+
+    public function UserDelete($id){
+        // dd('berhasil edit');
+        $deleteData=User::find($id);
+        $deleteData->delete();
+        return redirect()->route('user.view')->with('info','Delete user berhasil');
+    }
+
 }
