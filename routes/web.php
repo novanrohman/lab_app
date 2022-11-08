@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\BarangController;
+use App\Http\Controllers\Backend\BukuController;
+use App\Http\Controllers\Backend\KendaraanController;
 use Illuminate\Routing\Route as RoutingRoute;
 
 /*
@@ -48,5 +50,17 @@ Route::prefix('barangs')->group(function(){
     Route::get('/view',[BarangController::class, 'BarangView'])->name('barang.view');
     Route::get('/add',[BarangController::class, 'BarangAdd'])->name('barang.add');
     Route::post('/store',[BarangController::class, 'BarangStore'])->name('barang.store');
+});
+
+Route::prefix('buku')->group(function(){
+    Route::get('/view',[BukuController::class, 'BukuView'])->name('buku.view');
+    Route::get('/add',[BukuController::class, 'BukuAdd'])->name('buku.add');
+    Route::post('/store',[BukuController::class, 'BukuStore'])->name('buku.store');
+});
+
+Route::prefix('kendaraan')->group(function(){
+    Route::get('/view',[KendaraanController::class, 'KendaraanView'])->name('kendaraan.view');
+    Route::get('/add',[KendaraanController::class, 'KendaraanAdd'])->name('kendaraan.add');
+    Route::post('/store',[KendaraanController::class, 'KendaraanStore'])->name('kendaraan.store');
 });
  

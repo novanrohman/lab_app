@@ -51,6 +51,34 @@
             <li><a href="{{route('barang.add')}}"><i class="ti-more"></i>Tambah Barang</a></li>
           </ul>
         </li> 
+
+        <li class="treeview">
+          <a href="#">
+            <i data-feather="message-circle"></i>
+            <span>Kelola Buku</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('buku.view')}}"><i class="ti-more"></i>Tampilkan buku</a></li>
+            <li><a href="{{route('buku.add')}}"><i class="ti-more"></i>Tambah buku</a></li>
+          </ul>
+        </li> 
+
+        <li class="treeview">
+          <a href="#">
+            <i data-feather="message-circle"></i>
+            <span>Kelola Kendaraan</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a >
+          <ul class="treeview-menu">
+            <li><a href="{{route('kendaraan.view')}}"><i class="ti-more"></i>Tampilkan Kendaraan</a></li>
+            <li><a href="{{route('kendaraan.add')}}"><i class="ti-more"></i>Tambah Kendaraan</a></li>
+          </ul>
+        </li> 
 		  
         <li class="treeview">
           <a href="#">
