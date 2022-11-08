@@ -34,7 +34,21 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{route('user.view')}}"><i class="ti-more"></i>Tampilkan User</a></li>
-            <li><a href="calendar.html"><i class="ti-more"></i>Tambah User</a></li>
+            <li><a href="{{route('user.add')}}"><i class="ti-more"></i>Tambah User</a></li>
+          </ul>
+        </li> 
+
+        <li class="treeview">
+          <a href="#">
+            <i data-feather="message-circle"></i>
+            <span>Kelola Barang</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('barang.view')}}"><i class="ti-more"></i>Tampilkan Barang</a></li>
+            <li><a href="{{route('barang.add')}}"><i class="ti-more"></i>Tambah Barang</a></li>
           </ul>
         </li> 
 		  

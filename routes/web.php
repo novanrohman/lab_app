@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\BarangController;
 use Illuminate\Routing\Route as RoutingRoute;
 
 /*
@@ -41,5 +42,11 @@ Route::prefix('users')->group(function(){
     Route::post('/update/{id}',[UserController::class, 'UserUpdate'])->name('users.update');
     Route::get('/delete/{id}',[UserController::class, 'UserDelete'])->name('users.delete');
     
+});
+
+Route::prefix('barangs')->group(function(){
+    Route::get('/view',[BarangController::class, 'BarangView'])->name('barang.view');
+    Route::get('/add',[BarangController::class, 'BarangAdd'])->name('barang.add');
+    Route::post('/store',[BarangController::class, 'BarangStore'])->name('barang.store');
 });
  
