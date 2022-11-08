@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="{{asset('backend/css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('backend/css/skin_color.css')}}">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-     
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
 
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed">
@@ -100,9 +100,13 @@
 	<!-- <script src="{{asset('../assets/vendor_components/datatable/datatables.min.js')}}"></script>
 	<script src="{{asset('backend/js/pages/data-table.js')}}"></script> -->
 
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
 
-  <script>
+  
+	
+	
+</body>
+<script>
    $(function(){
     $(document).on('click','#delete', function(e){
        e.preventDefault();
@@ -145,7 +149,4 @@
     });
    });
   </script>
-	
-	
-</body>
 </html>
